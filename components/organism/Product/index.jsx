@@ -11,7 +11,7 @@ import ContainerMini from "@/components/atoms/ContainerMini";
 
 const Product = ({product}) => {
     useEffect(() => {
-        SwiperCore.use([Pagination, Autoplay]);
+        SwiperCore.use([Pagination]);
     }, [])
     
     return (

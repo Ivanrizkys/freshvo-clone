@@ -4,14 +4,10 @@ import { Box, Typography } from "@mui/material"
 import { Swiper, SwiperSlide } from "swiper/react";
 import ContainerMini from "@/components/atoms/ContainerMini";
 import SwiperCore, { Pagination, Autoplay } from 'swiper';
-import { useEffect } from "react";
 
+SwiperCore.use([Pagination, Autoplay]);
 
-const NewInformation = ({banners}) => {
-    useEffect(() => {
-        SwiperCore.use([Pagination, Autoplay]);
-    }, [])
-    
+const NewInformation = ({banners}) => {    
     return (
         <ContainerMini sx={{mt: "28px", mb: "15px"}}>
             <Typography sx={{fontSize: "13px", fontWeight: "700"}}>Informasi Terbaru</Typography>
