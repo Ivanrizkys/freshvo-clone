@@ -1,7 +1,14 @@
-import '../styles/globals.css'
+import { ThemeProvider } from "@emotion/react";
+import { CssBaseline } from "@mui/material";
+import theme from "../theme";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+    return (
+        <ThemeProvider theme={theme}>
+			<CssBaseline />
+            <Component {...pageProps} />
+        </ThemeProvider>
+    );
 }
 
-export default MyApp
+export default MyApp;
