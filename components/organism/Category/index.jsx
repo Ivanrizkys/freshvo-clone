@@ -13,7 +13,7 @@ const Category = ({category}) => {
                             return (
                                 <Grid key={data.id} item xs sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
                                     <Box sx={{padding: "10px", width: "64px", width: "64px", border: "1px solid #E8E8E8", borderRadius: "10px", cursor: "pointer"}}>
-                                        <Image src={data.image.url} width={42} height={42} alt="buah" />
+                                        <Image src={data.image.url} width={42} height={42} priority alt="buah" />
                                     </Box>
                                     <Typography sx={{fontSize: "13px", mt:"10px", cursor: "pointer"}}>{data.name}</Typography>
                                 </Grid>
