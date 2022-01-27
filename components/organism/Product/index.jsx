@@ -1,12 +1,12 @@
 import "swiper/css";
 import Image from "next/image";
 import { useEffect } from "react";
-import { getDiscount } from "@/utils/convertion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Box, Grid, Typography } from "@mui/material";
 import SwiperCore, { Pagination, Autoplay } from 'swiper';
 import ButtonPrimary from "@/components/atoms/ButtonPrimary";
 import ContainerMini from "@/components/atoms/ContainerMini";
+import { getDiscount, formatRupiah } from "@/utils/convertion";
 
 
 const Product = ({product}) => {
@@ -39,12 +39,12 @@ const Product = ({product}) => {
                                     <Typography sx={{fontSize: "14px", fontWeight: "600", textOverflow: "ellipsis", whiteSpace: "nowrap", overflow: "hidden"}}>{data.name}</Typography>
                                     <Typography sx={{fontSize: "10px", color: "rgb(204, 204, 204)"}}>Min order 1 x kg</Typography>
                                     {data.isPromo ? 
-                                        <del style={{fontSize: "10px", color: "#252525"}}>{data.regularPrice}</del>
+                                        <del style={{fontSize: "10px", color: "#252525"}}>{formatRupiah(data.regularPrice)}</del>
                                         :
                                         <del style={{fontSize: "10px", color: "#FFFF", display: "hidden"}}>35.500</del>
                                     }
                                     <Box sx={{display: "flex", alignItems: "start", mb: "23px"}}>
-                                        <Typography sx={{fontSize: "13px", fontWeight: "bold", color: "#25282B"}}>{data.price}</Typography>
+                                        <Typography sx={{fontSize: "13px", fontWeight: "bold", color: "#25282B"}}>{formatRupiah(data.price)}</Typography>
                                         <Typography sx={{fontSize: "10px"}}>/kg</Typography>
                                     </Box>
                                 </Box>
@@ -60,7 +60,8 @@ const Product = ({product}) => {
                         </SwiperSlide>
                     )
                 })}
-            </Swiper>    
+            </Swiper>
+            {/* <Box sx={{width: "92%", maxWidth: "442px", height: "75px", backgroundColor: "rgb(0, 167, 57)", position: "fixed", bottom: "70px", mb: "auto"}}></Box>     */}
             <Box sx={{width: "150px", height: "60px",mt: "5px", visibility: "visible"}}></Box>
         </>
     )
