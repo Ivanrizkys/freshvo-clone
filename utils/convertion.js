@@ -4,4 +4,11 @@ const getDiscount = (normalPrice, discountPrice) => {
     return Math.round(result)
 }
 
-export { getDiscount }
+const formatRupiah = (value) => {
+    const reverse = value.toString().split('').reverse().join('')
+    const split = reverse.match(/\d{1,3}/g)
+    const result = split.join('.').split('').reverse().join('')
+    return result
+}
+
+export { getDiscount, formatRupiah }
