@@ -17,6 +17,13 @@ const theme = createTheme({
         buttonPrimay: {
             main: "rgb(0, 167, 57)",
             contrastText: "#FFFF"
+        },
+        buttonTransparant: {
+            main: "#FFFFF",
+        },
+        buttonDisable: {
+            main: "rgb(173, 173, 173)",
+            contrastText: "#FFFF"
         }
     },
     typography: {
