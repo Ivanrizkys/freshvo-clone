@@ -12,7 +12,7 @@ SwiperCore.use([Pagination, Autoplay]);
 
 const NewInformation = ({banners}) => {    
     return (
-        <ContainerMini sx={{mt: "28px", mb: "15px"}}>
+        <ContainerMini sx={{mt: "28px", mb: "15px", position: "relative"}}>
             <Typography sx={{fontSize: "13px", fontWeight: "700"}}>Informasi Terbaru</Typography>
             <Typography sx={{fontSize: "10px", fontWeight: "400", color: "rgb(82, 87, 92)", mb: "12px"}}>Informasi terbaru hanya untukmu!</Typography>
             <Swiper pagination={{type: 'bullets', el: '.swiper-pagination-custom'}} slidesPerView={1.15} spaceBetween={20}>
@@ -26,7 +26,9 @@ const NewInformation = ({banners}) => {
                     )
                 })}
             </Swiper>
-            <div className="swiper-pagination-custom"></div>
+            <Box className="swiper-pagination-custom" sx={{mt: "10px"}}></Box>
+            {/* <div className="swiper-pagination-custom"></div> */}
+            {/* <p>Hallo sayang</p> */}
         </ContainerMini>
     )
 }
