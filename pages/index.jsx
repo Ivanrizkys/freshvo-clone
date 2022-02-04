@@ -1,7 +1,7 @@
 import { header } from "@/utils/request";
 import Layout from "@/components/atoms/Layout";
 import Header from "@/components/organism/Header";
-import Footer from "@/components/organism/Footer";
+import Navigation from "@/components/organism/Navigation";
 import Product from "@/components/organism/Product";
 import Category from "@/components/organism/Category";
 import ContainerXS from "@/components/atoms/Container";
@@ -15,9 +15,9 @@ const Home = ({location, product, category, banners}) => {
                     <Header location={location}/>
                     <VoucherAndPoints />
                     <NewInformation banners={banners}/>
-                    <Footer />
                     <Category category={category} />
                     <Product product={product}/>
+                    <Navigation />
                 </ContainerXS>
         </Layout>
     );
