@@ -17,7 +17,7 @@ const Home = ({location, product, category, banners}) => {
                     <NewInformation banners={banners}/>
                     <Category category={category} />
                     <Product product={product}/>
-                    <Navigation />
+                    <Navigation currentPage="home"/>
                 </ContainerXS>
         </Layout>
     );
